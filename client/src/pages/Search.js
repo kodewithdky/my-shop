@@ -3,7 +3,7 @@ import React from "react";
 import { useSearch } from "../context/Search";
 
 const Search = () => {
-  const [values, setValues] = useSearch();
+  const [values] = useSearch();
   return (
     <Layout title="Search -result myshop">
       <div className="container">

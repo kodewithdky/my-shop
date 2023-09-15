@@ -18,8 +18,7 @@ var gateway = new braintree.BraintreeGateway({
 //create product
 export const createProductController = async (req, res) => {
   try {
-    const { name, slug, description, price, category, quantity, shipping } =
-      req.fields;
+    const { name, description, price, category, quantity } = req.fields;
     const { photo } = req.files;
     //validation
     switch (true) {
@@ -75,8 +74,7 @@ export const createProductController = async (req, res) => {
 //update product
 export const updateProductController = async (req, res) => {
   try {
-    const { name, slug, description, price, category, quantity, shipping } =
-      req.fields;
+    const { name, description, price, category, quantity } = req.fields;
     const { photo } = req.files;
     //validation
     switch (true) {

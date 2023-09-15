@@ -56,7 +56,7 @@ const CreateCategory = () => {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        `/api/v1/category//update-category/${selected._id}`,
+        `/api/v1/category/update-category/${selected._id}`,
         { name: updatedName }
       );
       if (data.success) {
@@ -78,7 +78,7 @@ const CreateCategory = () => {
       let answer = window.prompt("Are you sour to delete this category");
       if (!answer) return;
       const { data } = await axios.delete(
-        `/api/v1/category///detele-category/${id}`,
+        `/api/v1/category/detele-category/${id}`,
         { name: updatedName }
       );
       if (data.success) {
